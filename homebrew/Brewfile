@@ -1,21 +1,37 @@
+# Taps
 tap "homebrew/bundle"
-brew "bat"
-brew "bzip2"
-brew "eza"
-brew "exercism"
-brew "gh"
-brew "git"
-brew "kubectx"
-brew "minikube"
-brew "mise"
-brew "starship"
-brew "stow"
-brew "telnet"
-brew "tldr"
-brew "tmux"
-cask "alacritty"
-cask "bluesnooze"
+
+# Fonts
 cask "font-jetbrains-mono-nerd-font"
-cask "hiddenbar"
-cask "monitorcontrol"
-cask "orbstack"
+
+# Shell Tools
+brew "telnet"
+brew "bzip2"
+brew "git"
+
+# Essentials
+cask "alacritty"
+brew "starship"
+brew "mise"
+brew "tmux"
+brew "stow"
+
+# Alternatives to popular CLI Tools
+brew "bat"  # A cat clone with wings.
+brew "eza"  # A simple, fast, and modern ls replacement.
+brew "tldr" # Simplified man pages.
+
+# Thrid-party CLI Tools
+brew "gh"   # GitHub CLI.
+brew "exercism" # Exercism CLI.
+
+# Everything Containers
+cask "orbstack" # A simple app to manage Docker containers.
+brew "kubectx"  # Switch faster between Kubernetes contexts.
+brew "minikube" # Run Kubernetes locally.
+
+# MacOS Apps
+cask "bluesnooze"       # A simple app to toggle Bluetooth on/off on lid close.
+cask "hiddenbar"        # A simple app to hide the menu bar icons.
+cask "monitorcontrol"   # A simple app to control external monitor brightness.
+
