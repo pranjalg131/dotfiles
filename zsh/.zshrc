@@ -75,3 +75,6 @@ helper $1 "Assume AWS role\n Usage: aws-assume-role <aws-role-arn> <role-session
 
 # Starship Prompt
 eval "$(starship init zsh)"
+
+# Mise 
+eval "$(mise activate)"
