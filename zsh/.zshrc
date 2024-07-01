@@ -8,14 +8,17 @@ plugins=(
     copypath
 	dirhistory
 	zsh-syntax-highlighting
-    zsh-autosuggestions
+   	zsh-autosuggestions
 	history
-	)
+)
 
 source $ZSH/oh-my-zsh.sh
 
 # My Config to disable auto complete on urls.
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste)
+
+## Aliases
+alias ls="eza --icons=always --color=always --git"
 
 # AWS Config 
 aws-login() {
