@@ -1,0 +1,6 @@
+[settings]
+experimental = true
+
+[tools]
+go = 'latest'
+java = "17"

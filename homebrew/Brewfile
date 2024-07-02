@@ -35,3 +35,8 @@ cask "bluesnooze"       # A simple app to toggle Bluetooth on/off on lid close.
 cask "hiddenbar"        # A simple app to hide the menu bar icons.
 cask "monitorcontrol"   # A simple app to control external monitor brightness.
 
+# Development Tools
+cask "jetbrains-toolbox"
+cask "postman"
+cask "dbeaver-community"
+cask "visual-studio-code"
