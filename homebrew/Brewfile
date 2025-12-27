@@ -25,15 +25,21 @@ brew "exercism" # Exercism CLI.
 # Everything Containers
 cask "orbstack" # A simple app to manage Docker containers.
 brew "kubectx"  # Switch faster between Kubernetes contexts.
-brew "minikube" # Run Kubernetes locally.
+brew "kind" # Run Kubernetes locally.
 
 # MacOS Apps
 cask "bluesnooze"       # A simple app to toggle Bluetooth on/off on lid close.
 cask "hiddenbar"        # A simple app to hide the menu bar icons.
-cask "monitorcontrol"   # A simple app to control external monitor brightness.
+cask "betterdisplay"
+cask "rectangle"
+cask "logi-options+"
+cask "maccy"
+cask "battery"
+
 
 # Development Tools
 cask "visual-studio-code"
+cask "dbgate"
 
 # Browsers
 cask "brave-browser"   # Privacy focused browser
@@ -43,4 +49,3 @@ cask "notion"
 cask "discord"
 cask "whatsapp"
 cask "pcsx2"
-cask "ente-auth"

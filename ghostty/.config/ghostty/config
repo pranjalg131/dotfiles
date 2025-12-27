@@ -1,0 +1,3 @@
+theme = Catppuccin Mocha
+font-family = JetBrainsMono NFM Bold
+command = /bin/zsh

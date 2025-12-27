@@ -1,6 +1,3 @@
-[settings]
-experimental = true
-
 [tools]
 go = 'latest'
-java = "17"
+java = "latest"

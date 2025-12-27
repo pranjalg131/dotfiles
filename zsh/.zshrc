@@ -5,7 +5,7 @@ plugins=(
 	git 
 	copyfile
 	copybuffer
-    copypath
+    	copypath
 	dirhistory
 	zsh-syntax-highlighting
    	zsh-autosuggestions
@@ -41,7 +41,6 @@ export AWS_PROFILE=$1
 kubectx $1
 }
 
-
 ###### Config and Functions from Anuj ###########
 
 helper() {
@@ -51,17 +50,6 @@ helper() {
     fi
     return 1
 }
-
-aws-r53-association() {
-    #this help associate specific vpc with hosted zone and delete association
-    helper $1 "Associate aws VPC to route53 hosted zone \nUsage: r53-association <hosted-zone-id> <region> <vpc-id> <hostedzone-aws-profile> <associate-aws-profile>"
-    if [ $? -ne 0 ]; then
-        aws route53 create-vpc-association-authorization --hosted-zone-id $1 --vpc VPCRegion=$2,VPCId=$3 --region $2 --profile $4
-        aws route53 associate-vpc-with-hosted-zone --hosted-zone-id $1 --vpc VPCRegion=$2,VPCId=$3 --region $2 --profile $5
-        aws route53 delete-vpc-association-authorization --hosted-zone-id $1 --vpc VPCRegion=$2,VPCId=$3 --region $2 --profile $4
-    fi
-}
-
 
 aws-assume-role() {
 helper $1 "Assume AWS role\n Usage: aws-assume-role <aws-role-arn> <role-session-name>"
