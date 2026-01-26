@@ -1,3 +1,5 @@
 [tools]
 go = 'latest'
 java = "latest"
+python = "latest"
+uv = "latest"

@@ -27,6 +27,16 @@ cask "orbstack" # A simple app to manage Docker containers.
 brew "kubectx"  # Switch faster between Kubernetes contexts.
 brew "kind" # Run Kubernetes locally.
 
+# AWS 
+brew "awscli"
+
+# AI
+cask "claude-code"
+cask "claude"
+
+# Terraform
+brew "tenv"
+
 # MacOS Apps
 cask "bluesnooze"       # A simple app to toggle Bluetooth on/off on lid close.
 cask "hiddenbar"        # A simple app to hide the menu bar icons.
@@ -35,6 +45,7 @@ cask "rectangle"
 cask "logi-options+"
 cask "maccy"
 cask "battery"
+cask "caffeine"
 
 
 # Development Tools
