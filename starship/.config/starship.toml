@@ -107,7 +107,7 @@ format = '[ $user]($style)'
 
 [hostname]
 ssh_only = false
-format = "[@$hostname]($style)"
+format = "[@$hostname ]($style)"
 disabled = false
 style = "bg:surface0 fg:text"
 
