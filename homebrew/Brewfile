@@ -5,6 +5,7 @@ cask "font-jetbrains-mono-nerd-font"
 brew "telnet"
 brew "bzip2"
 brew "git"
+brew "tree"
 
 # Essentials
 cask "ghostty"
@@ -18,23 +19,25 @@ brew "bat"  # A cat clone with wings.
 brew "eza"  # A simple, fast, and modern ls replacement.
 brew "tldr" # Simplified man pages.
 
-# Thrid-party CLI Tools
-brew "gh"   # GitHub CLI.
+# Third-party CLI Tools
+brew "gh"       # GitHub CLI.
 brew "exercism" # Exercism CLI.
+brew "awscli"   # AWS CLI v2, the unified tool to manage AWS services.
 
 # Everything Containers
 cask "orbstack" # A simple app to manage Docker containers.
+
+# Kubernetes
 brew "kubectx"  # Switch faster between Kubernetes contexts.
-brew "kind" # Run Kubernetes locally.
+brew "kind"     # Run Kubernetes locally.
 
 # AWS 
-brew "awscli"
+
 
 # AI
 cask "claude-code"
-cask "claude"
 
-# Terraform
+# IaC 
 brew "tenv"
 
 # MacOS Apps
@@ -47,17 +50,23 @@ cask "maccy"
 cask "battery"
 cask "caffeine"
 
-
 # Development Tools
 cask "visual-studio-code"
+
+# Databases
 cask "dbgate"
 
 # Browsers
 cask "brave-browser"   # Privacy focused browser
 
-# Apps
-cask "notion"
+# Communication
+cask "slack"
 cask "discord"
 cask "whatsapp"
+
+# Productivity
+cask "notion"
+cask "obsidian"
+
+# Emulators
 cask "pcsx2"
-cask "slack"

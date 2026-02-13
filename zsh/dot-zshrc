@@ -1,0 +1,32 @@
+plugins=(
+	git
+	copyfile
+	zsh-syntax-highlighting
+    zsh-autosuggestions
+	history
+)
+
+source ~/.env.zsh 
+source $ZSH/oh-my-zsh.sh
+
+# Source separate config files (after oh-my-zsh)
+for file in ~/.{aliases,functions}.zsh; do
+    if [ -f "$file" ]; then
+        source "$file"
+    else
+        echo "File not found: $file"
+    fi
+done
+
+# My Config to disable auto complete on urls.
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste)
+
+# Mise (load first to manage tool versions)
+if command -v mise &> /dev/null; then
+    eval "$(mise activate zsh)"
+fi
+
+# Starship Prompt
+if command -v starship &> /dev/null; then
+    eval "$(starship init zsh)"
+fi

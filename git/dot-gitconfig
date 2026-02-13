@@ -1,0 +1,7 @@
+[user]
+    name = Pranjal Gupta
+    email = pranjalg131@gmail.com
+[push]
+    autoSetupRemote = true
+[core]
+    excludesfile = /Users/pranjal/.gitignore
