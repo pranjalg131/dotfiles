@@ -6,3 +6,6 @@ export LC_ALL="en_US.UTF-8"
 
 # Define the Oh My Zsh installation path
 export ZSH="$HOME/.oh-my-zsh"
+
+# Add native binaries for applications
+export PATH="$HOME/.local/bin:$PATH"

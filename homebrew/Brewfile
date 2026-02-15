@@ -31,12 +31,6 @@ cask "orbstack" # A simple app to manage Docker containers.
 brew "kubectx"  # Switch faster between Kubernetes contexts.
 brew "kind"     # Run Kubernetes locally.
 
-# AWS 
-
-
-# AI
-cask "claude-code"
-
 # IaC 
 brew "tenv"
 
