@@ -1,0 +1,28 @@
+{
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/pranjal/.claude/hooks/rtk-rewrite.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash /Users/pranjal/.claude/statusline-command.sh"
+  },
+  "effortLevel": "medium",
+  "advisorModel": "opus",
+  "theme": "light",
+  "remoteControlAtStartup": false,
+  "model": "sonnet"
+}

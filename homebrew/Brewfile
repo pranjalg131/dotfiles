@@ -1,3 +1,7 @@
+
+# Keyboard Customizations
+cask "karabiner-elements"
+
 # Fonts
 cask "font-jetbrains-mono-nerd-font"
 
@@ -6,6 +10,7 @@ brew "telnet"
 brew "bzip2"
 brew "git"
 brew "tree"
+brew "wget"
 
 # Essentials
 cask "ghostty"
@@ -13,11 +18,24 @@ brew "starship"
 brew "mise"
 brew "tmux"
 brew "stow"
+brew "neovim", args: ["HEAD"]
 
 # Alternatives to popular CLI Tools
 brew "bat"  # A cat clone with wings.
 brew "eza"  # A simple, fast, and modern ls replacement.
 brew "tldr" # Simplified man pages.
+brew "ripgrep"
+brew "fd"
+
+# TUI
+brew "lazygit"
+brew "llmfit"
+brew "btop"
+brew "superfile"
+brew "lazydocker"
+
+tap "gromgit/brewtils"
+brew "gromgit/brewtils/taproom"
 
 # Third-party CLI Tools
 brew "gh"       # GitHub CLI.
@@ -34,6 +52,13 @@ brew "kind"     # Run Kubernetes locally.
 # IaC 
 brew "tenv"
 
+# AI
+brew "gemini-cli"
+cask "claude"
+cask "codex-app"
+cask "cursor"
+brew "rtk"
+
 # MacOS Apps
 cask "bluesnooze"       # A simple app to toggle Bluetooth on/off on lid close.
 cask "hiddenbar"        # A simple app to hide the menu bar icons.
@@ -43,12 +68,13 @@ cask "logi-options+"
 cask "maccy"
 cask "battery"
 cask "caffeine"
+cask "localsend"
+cask "calibre"
+cask "thorium"
+cask "gnucash"
 
 # Development Tools
 cask "visual-studio-code"
-
-# Databases
-cask "dbgate"
 
 # Browsers
 cask "brave-browser"   # Privacy focused browser

@@ -30,3 +30,6 @@ fi
 if command -v starship &> /dev/null; then
     eval "$(starship init zsh)"
 fi
+
+# Added by Antigravity
+export PATH="/Users/pranjal/.antigravity/antigravity/bin:$PATH"

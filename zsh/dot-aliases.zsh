@@ -6,3 +6,4 @@ alias lla="ls -lha"
 alias grep="grep --color=auto"
 
 alias k="kubectl"
+alias vim="nvim"

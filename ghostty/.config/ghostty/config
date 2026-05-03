@@ -1,4 +1,4 @@
 command = /bin/zsh
-theme = Catppuccin Mocha
+theme = Catppuccin Latte
 font-family = JetBrainsMono Nerd Font Mono
-font-size = 16
+font-size = 18
