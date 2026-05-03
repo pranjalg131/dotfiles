@@ -5,12 +5,12 @@ format = """
 $os\
 $username\
 $hostname\
-[](bg:orange fg:surface0)\
+[](bg:orange fg:surface0)\
 $directory\
-[](fg:orange bg:green)\
+[](fg:orange bg:green)\
 $git_branch\
 $git_status\
-[](fg:green bg:teal)\
+[](fg:green bg:teal)\
 $c\
 $rust\
 $golang\
@@ -20,9 +20,9 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:teal bg:blue)\
+[](fg:teal bg:blue)\
 $kubernetes\
-[](fg:blue bg:peach)\
+[](fg:blue bg:peach)\
 $aws\
 [](fg:peach)\
 $line_break$character"""

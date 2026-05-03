@@ -47,6 +47,10 @@
 # Override at runtime via: CLAUDE_STATUSLINE_THEME=mocha bash statusline-command.sh
 THEME="${CLAUDE_STATUSLINE_THEME:-latte}"
 
+# Separator style: "pill" (rounded caps, default) or "arrow" (sharp Powerline ►)
+# Override via: CLAUDE_STATUSLINE_SEPARATOR=arrow bash statusline-command.sh
+SEPARATOR="${CLAUDE_STATUSLINE_SEPARATOR:-pill}"
+
 # ── Input ──────────────────────────────────────────────────────────────────
 input=$(cat)
 
@@ -55,9 +59,16 @@ model=$(echo "$input" | jq -r '.model.display_name')
 remaining=$(echo "$input" | jq -r '.context_window.remaining_percentage // empty')
 
 # ── Glyphs (hex-encoded UTF-8 for bash 3.2 compatibility) ─────────────────
-sep=$'\xEE\x82\xB0'         # U+E0B0 Powerline right arrow
 icon_folder=$'\xEF\x81\xBC' # U+F07C nf-fa-folder_open
 icon_git=$'\xEE\x9C\xA5'    # U+E725 nf-dev-git_branch
+
+if [ "$SEPARATOR" = "arrow" ]; then
+  open_sep=""                  # no leading cap for arrow style
+  close_sep=$'\xEE\x82\xB0'  # U+E0B0  sharp Powerline ►
+else
+  open_sep=$'\xEE\x82\xB6'   # U+E0B6  rounded left  cap  (
+  close_sep=$'\xEE\x82\xB4'  # U+E0B4  rounded right cap  )
+fi
 
 reset=$'\e[0m'
 
@@ -147,10 +158,8 @@ if [ -n "$remaining" ]; then
 fi
 
 # ── Render ─────────────────────────────────────────────────────────────────
-# Walk the segment array, printing each segment's content followed by a
-# Powerline arrow whose foreground matches the current segment's bg and
-# whose background matches the next segment's bg (or transparent if last).
-output=""
+IFS='|' read -r _fn _fc first_arrow_fg <<< "${segments[0]}"
+output="${reset}${first_arrow_fg}${open_sep}"
 total=${#segments[@]}
 for (( i = 0; i < total; i++ )); do
   IFS='|' read -r _name content arrow_fg <<< "${segments[$i]}"
@@ -165,9 +174,9 @@ for (( i = 0; i < total; i++ )); do
       blue)     next_bg="$blue_bg" ;;
       mauve)    next_bg="$mauve_bg" ;;
     esac
-    output+="${next_bg}${arrow_fg}${sep}${reset}"
+    output+="${next_bg}${arrow_fg}${close_sep}${reset}"
   else
-    output+="${reset}${arrow_fg}${sep}${reset}"
+    output+="${reset}${arrow_fg}${close_sep}${reset}"
   fi
 done
 
