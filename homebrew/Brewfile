@@ -1,4 +1,3 @@
-
 # Keyboard Customizations
 cask "karabiner-elements"
 
@@ -28,11 +27,8 @@ brew "ripgrep"
 brew "fd"
 
 # TUI
-brew "lazygit"
-brew "llmfit"
 brew "btop"
 brew "superfile"
-brew "lazydocker"
 
 tap "gromgit/brewtils"
 brew "gromgit/brewtils/taproom"
@@ -48,16 +44,7 @@ cask "orbstack" # A simple app to manage Docker containers.
 # Kubernetes
 brew "kubectx"  # Switch faster between Kubernetes contexts.
 brew "kind"     # Run Kubernetes locally.
-
-# IaC 
-brew "tenv"
-
-# AI
-brew "gemini-cli"
-cask "claude"
-cask "codex-app"
-cask "cursor"
-brew "rtk"
+brew "kubernetes-cli"
 
 # MacOS Apps
 cask "bluesnooze"       # A simple app to toggle Bluetooth on/off on lid close.
@@ -71,7 +58,8 @@ cask "caffeine"
 cask "localsend"
 cask "calibre"
 cask "thorium"
-cask "gnucash"
+cask "free-download-manager"
+cask "vlc"
 
 # Development Tools
 cask "visual-studio-code"
@@ -86,7 +74,6 @@ cask "whatsapp"
 
 # Productivity
 cask "notion"
-cask "obsidian"
 
-# Emulators
+# Gaming
 cask "pcsx2"

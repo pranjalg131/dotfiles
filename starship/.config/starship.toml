@@ -32,7 +32,7 @@ $cmd_duration\
 """
 
 
-palette = 'catppuccin_latte'
+palette = 'catppuccin_mocha'
 
 [palettes.gruvbox_dark]
 color_fg0 = '#fbf1c7'
